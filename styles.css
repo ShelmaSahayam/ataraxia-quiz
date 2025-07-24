@@ -1,0 +1,19 @@
+body {
+    background-color: #1e1e2f;
+    color: #f9f9f9;
+    font-family: 'Georgia', serif;
+    background-image: url('assets/background.jpg');
+    background-size: cover;
+    cursor: url('assets/feather-cursor.png'), auto;
+}
+.quiz-container {
+    width: 80%;
+    max-width: 700px;
+    margin: auto;
+    padding: 2em;
+    background: rgba(0,0,0,0.6);
+    border-radius: 8px;
+}
+.hidden {
+    display: none;
+}
