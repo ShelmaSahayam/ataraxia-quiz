@@ -1,18 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Realm Sorting Quiz | Ataraxia</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Realm Sorting Quiz – Land of Ataraxia</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <div class="quiz-container">
-        <h1>Discover Your Realm in Ataraxia</h1>
-        <form id="quiz-form"></form>
-        <button onclick="submitQuiz()">Reveal My Realm</button>
-        <div id="result" class="hidden"></div>
+  <audio id="bg-music" loop>
+    <source src="assets/music.mp3" type="audio/mpeg" />
+  </audio>
+
+  <div class="container">
+    <h1 class="title">🜁 The Realm Sorting Quiz of Ataraxia 🜃</h1>
+    <button id="music-toggle">🔊 Toggle Music</button>
+    <form id="quiz-form">
+      <div id="questions-container"></div>
+      <button type="submit" class="submit-btn">Discover Your Realm</button>
+    </form>
+    <div id="email-capture" class="hidden">
+      <h2>Your Realm Awaits...</h2>
+      <p>Enter your email to reveal your realm:</p>
+      <input type="email" id="user-email" required placeholder="you@aethermail.com" />
+      <button id="reveal-result">Reveal My Realm</button>
     </div>
-    <script src="script.js"></script>
+    <div id="result" class="hidden">
+      <h2>You belong to <span id="realm-name"></span>!</h2>
+      <p id="realm-description"></p>
+      <a id="download-badge" href="#" download="Realm_Badge.png">Download Your Realm Sigil</a>
+      <div class="social-share">
+        <p>Share your realm:</p>
+        <button id="share-twitter">X</button>
+        <button id="share-facebook">Facebook</button>
+        <button id="share-instagram">Instagram</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
